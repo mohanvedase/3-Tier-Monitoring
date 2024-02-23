@@ -100,6 +100,9 @@
 
    `http://<your-server-ip>:9090`
 
+  - ![image](https://github.com/mohanvedase/MERN-Monitoring/assets/139565500/ec118056-6978-4e49-b0c6-2ca988fee08a)
+
+
    ## Installing Node Exporter:
 
    Create a system user for Node Exporter and download Node Exporter:
@@ -163,9 +166,8 @@
 
    You can access Node Exporter metrics in Prometheus.
 
-2. **Configure Prometheus Plugin Integration:**
+  - ![image](https://github.com/mohanvedase/MERN-Monitoring/assets/139565500/7d1c9edf-03ee-47e6-84c8-9029ad2090c0)
 
-   Integrate Jenkins with Prometheus to monitor the CI/CD pipeline.
 
    **Prometheus Configuration:**
 
@@ -180,13 +182,7 @@
        static_configs:
          - targets: ['localhost:9100']
 
-     - job_name: 'jenkins'
-       metrics_path: '/prometheus'
-       static_configs:
-         - targets: ['<your-jenkins-ip>:<your-jenkins-port>']
    ```
-
-   Make sure to replace `<your-jenkins-ip>` and `<your-jenkins-port>` with the appropriate values for your Jenkins setup.
 
    Check the validity of the configuration file:
 
@@ -291,6 +287,7 @@ To visualize metrics, you need to add a data source. Follow these steps:
 
 - In the "HTTP" section:
   - Set the "URL" to `http://localhost:9090` (assuming Prometheus is running on the same server).
+  - ![image](https://github.com/mohanvedase/MERN-Monitoring/assets/139565500/57313d8d-b564-4ac0-9054-203e429026be)
   - Click the "Save & Test" button to ensure the data source is working.
 
 **Step 10: Import a Dashboard:**
